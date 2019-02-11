@@ -1,4 +1,4 @@
-这是一个PHP的Email的基础知识；
+这是一个PHP的session的基础知识；
 //试验session的时候，首先是开启一个session
 session_start();
 //设置表头，即还用utf-8的编码方式输出到浏览器
