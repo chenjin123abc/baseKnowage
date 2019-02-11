@@ -1,0 +1,17 @@
+这是一个PHP的电子邮件的基础知识；
+//试验session的时候，首先是开启一个session
+session_start();
+//设置表头，即还用utf-8的编码方式输出到浏览器
+header("Content-Type:text/html;charSet=utf-8");
+if(isset($_SESSION["visit"])){
+    //设置session的值。
+    $_SESSION["visit"]= $_SESSION["visit"]+1;
+}else{
+    $_SESSION["visit"]=1;
+}
+echo "这个网站的访问量是".$_SESSION["visit"];
+if ($_SESSION["visit"]==30){
+    //销毁session的值
+    unset($_SESSION["visit"]);
+}
+?>
